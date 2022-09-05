@@ -1,0 +1,146 @@
+
+/* SECTION QUI SOMMES NOUS */
+
+.subsection2{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background-image: url(../../assets/images/subsection-bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    height: auto;
+}
+.subsection2-container{
+    padding: 60px 0px 300px 0px;
+}
+.subsection2-banner{
+    max-width: 40%;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.subsection2-banner span{
+    color: #18CF89;
+}
+.subsection2-text p {
+    font-size: 20px;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 1.25em;
+}
+.subsection2-text-content{ 
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.subsection2-text-content H2{
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.subsection2-imgBx{
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+}
+.subsection2-hashtags{
+    font-size: 16px;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 1.25em;
+}
+
+/* SECTION POURQUOI L'ELECTRIQUE */
+
+.subsection3{
+    width: 100%;
+    margin: auto;
+    background-image: url(../../assets/images/subsection-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+   
+    display: flex;
+    /* height: 100vh; */
+}
+
+.subsection3-banner :before {
+    margin:0 0 0 5px;
+    transform:scaleX(-1);
+}
+.subsection3-container{
+    padding: 260px 0px 100px 0px;
+}
+.subsection3-banner{
+    max-width: 40%;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.subsection3-banner span{
+    color: #18CF89;
+}
+.subsection3-text p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.25em;
+}
+.subsection3-text-content{ 
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.subsection3-text-content h2{
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.presentation-cars-card-imgBx{
+    position: absolute;
+    z-index: 1000;
+    width: 300px;
+    height: 500px;
+    /* margin-bottom: 20px; */
+    /* bottom: -400px; */
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.presentation-cars-card-imgBx img {
+position: absolute;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .subsection2-container{
+        padding: 10px 0px 300px 0px;
+    }
+    .subsection3-container{
+        padding: 260px 0px 200px 0px
+    }
+
+    .subsection2-text p {
+   
+        padding: 0px;
+        text-align: justify;
+    }
+
+    .subsection2-banner,  .subsection3-banner, .subsection4-banner  {
+        max-width: 80%;
+    }
+
+    .subsection-container {
+        padding: 60px;
+    }
+}

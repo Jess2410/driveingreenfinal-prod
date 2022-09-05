@@ -1,0 +1,46 @@
+.informations{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ABFCCF;
+}
+
+.nom-prenom{
+    display: flex;
+}
+.nom{
+    min-width: 155px;
+}
+.prenom{
+    min-width: 155px;
+}
+.personnal-info{
+    margin: 15px;
+    padding: 15px;
+    background-color: rgba(254, 254, 254, 0.518);
+    border-radius: 15px;
+}
+
+.info-connexion{
+    display: flex;
+    min-width: 137px;
+}
+
+.btn{
+    display: flex;
+
+}
+h1{
+    color: rgb(0, 27, 10);
+}
+button{
+    margin: 15px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #07485B;
+    color: white;
+    border-color: white;
+    min-width: 127px;
+}

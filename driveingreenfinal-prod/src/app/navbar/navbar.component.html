@@ -1,0 +1,41 @@
+<header>
+    <mat-toolbar>
+        <div routerLink='' class="header-logo lien">
+            <img src="./../../assets/images/logo1.png" alt="logo">
+        </div>
+        <button
+          class="burger_menu"
+          *ngIf="sidenav.mode === 'push'"
+          (click)="sidenav.toggle()"
+        >
+          <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+          <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+        </button>
+        <nav *ngIf="sidenav.mode === 'over'" class="header-nav">
+            <ul class="header-ul">
+                <li routerLink="booking" class="lien">Réservation</li>
+                <!-- <li class="lien" >Nos services</li> -->
+                <li routerLink="informations" class="lien" >À propos</li>
+                <li routerLink="contact" class="lien" >Contact</li>
+            </ul>
+            <button routerLink='/connexion' class="lien"  id="connexionButton">Connexion</button>
+        </nav>
+      </mat-toolbar>
+
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z2" position="end">
+            <nav>
+                <ul>
+                  <li routerLink="booking" class="lien" (click)="closenavbar()">Réservation</li>
+                  <!-- <li class="lien" >Nos services</li> -->
+                  <li routerLink="informations" class="lien" (click)="closenavbar()">À propos</li>
+                  <li routerLink="contact" class="lien" (click)="closenavbar()">Contact</li>
+                </ul>
+                <button class="header-button">Connexion</button>
+            </nav>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+</header>

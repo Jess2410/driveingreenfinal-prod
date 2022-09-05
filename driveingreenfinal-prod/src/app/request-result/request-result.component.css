@@ -1,0 +1,848 @@
+/* container */
+
+/* .details_voiture{
+width: 80%;
+margin: auto;
+} */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15px;
+    height: fit-content;
+    overflow: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* recap_formulaire */
+
+.big {
+    background-color: red !important;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recap_subtitle_final{
+    align-items: flex-start !important;
+}
+
+.recap_formulaire {
+    background-color:rgb(66, 68, 55);
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    height: fit-content;
+
+}
+
+.recap_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.recap_subtitle {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.recap_number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border: solid 1px white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: center;
+}
+
+.input_style {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.input_style p {
+    background: 0;
+    color: #FFFFFF;
+    border: 0;
+}
+
+.dateheure {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.details {
+    display: flex;
+}
+
+.recap_voiture p {
+    padding: 20px;
+}
+
+/* tab */
+
+.tab {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.tab ul {
+    padding: 20px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab ul li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: solid 1px black;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: center;
+}
+
+.description_tab {
+    padding: 0;
+}
+
+.active {
+    background-color: #07485B;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden !important;
+    width: 0;
+}
+
+.btn-final{
+    display: flex;
+}
+
+
+/* form responsive */
+  
+
+/* .contactForm {
+    position : relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.contactForm form{
+    width: 100%;
+}
+.contactForm .row100{
+    width: 100%;
+    display: flex;
+}
+
+.contactForm .row{
+    width: 100%;
+    display: flex;
+}
+.contactForm .row100 .inputBx50{
+    width: 50%;
+    margin : 0 20px;
+}
+
+.contactForm .row100 .inputBx100{
+    width: 100%;
+    margin : 0 20px;
+}
+.contactForm .row100 input{
+    position : relative;
+    border: none;
+    outline: none;
+}
+img{
+    margin-right: 5px;
+    height: 20px;
+}
+.contactForm .row100 input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+input[type="time"]::-webkit-calendar-picker-indicator,  input[type="date"]::-webkit-calendar-picker-indicator{
+    visibility:hidden ;
+    } */
+
+
+#continuer {
+    background: #236A82;
+    color: #fff;
+    max-width: 200px;
+    position : relative;
+    border: 1px solid #236A82;
+    border-radius: 30px;
+    max-width: 100%;
+    padding: 10px 20px;
+    /* outline : none; */
+    font-size: 18px;
+    font-weight: 300;
+    margin : 20px 30px;
+    cursor: pointer;
+}
+
+#annuler {
+    position : relative;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    color : rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    max-width: 100%;
+    padding: 10px 32px;
+    outline : none;
+    font-size: 18px;
+    font-weight: 300;
+    margin : 20px 30px;
+    cursor: pointer;
+}
+
+
+/* 
+.buttons-contain{
+margin: auto;
+display: flex;
+justify-content: space-evenly;
+} 
+
+.fieldset{
+    color : #236A82;
+    font-size: 18px;
+    padding: 0;
+}
+
+.input-style{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    color : rgb(0, 0, 0);
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: #236A82;
+    font-size: 18px;
+    font-weight: 300;
+    margin : 15px 0;
+    resize: none;
+    padding: 5px;
+} */
+
+@media(max-width:800px){
+    
+    .row100{
+        flex-direction: column;
+    }
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100{
+        width: 100%;
+        margin : 0;
+    }
+
+    .contactForm .row input[type="submit"]{
+
+    margin : 20px 0px 20px 10px;
+}
+
+}
+
+.formulaire{
+    background: #549394;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 80px;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+  
+  
+  .container{
+    padding-left: 10%;
+    width: 80%;
+  }
+  
+  
+  .contactForm {
+    /* position : relative; */
+    /* max-width: 800px; */
+    margin: 0 auto;
+    display: flex;
+   
+  }
+  /* .contactForm .row100{
+    width: 100%;
+    display: flex;
+  } */
+  
+  .contactForm .row{
+    width: 100%;
+    display: flex;
+  }
+  .contactForm .row100 .inputBx50{
+    width: 45%;
+    /* margin : 0 20px; */
+  }
+  .contactForm .row100 .inputBx100{
+    width: 100%;
+    /* margin : 0 20px; */
+  }
+  .contactForm .row100 input{
+    position : relative;
+    border: none;
+    outline: none;
+  } 
+  .contactForm form{
+    width: 100%;
+  }
+  img{
+    margin-right: 5px;
+    height: 20px;
+  }
+  .contactForm .row100 input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+  } 
+  
+  .type{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+  }
+  
+  
+  .utilitaires, .voitures{
+    margin-left: 5%;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+  
+  .agence{
+    width: 100%;
+    margin-top: 6%;
+  }
+  
+  input[type=search], input[type=date], input[type=time]{
+  border-color: white;
+  }
+  
+  p{
+    color: #07485B !;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+  
+  input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+  }
+  
+  .control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 5px;
+    padding-top: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+  .control_indicator {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: undefinedpx;
+  }
+  
+  .control:hover input ~ .control_indicator,
+  .control input:focus ~ .control_indicator {
+    background: #cccccc;
+  }
+  
+  .control input:checked ~ .control_indicator {
+    background: #ABFCCF;
+  }
+  
+  .control:hover input:not([disabled]):checked ~ .control_indicator,
+  .control input:checked:focus ~ .control_indicator {
+    background: #ABFCCF;
+  
+  }
+  
+  .control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  .control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  .control input:checked ~ .control_indicator:after {
+    display: block;
+  }
+  .control-radio .control_indicator {
+    border-radius: 50%;
+  }
+  
+  .control-radio .control_indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: background 250ms;
+  }
+  .control-radio input:disabled ~ .control_indicator:after {
+    background: transparent;
+  }
+  
+  .container{
+    padding: 30px;
+    margin: auto;
+    }
+    
+    input[type="time"]::-webkit-calendar-picker-indicator,  input[type="date"]::-webkit-calendar-picker-indicator{
+        visibility:hidden ;
+     }
+  
+    .contactForm .row input[type="submit"]{
+        background: #07485B;
+        color: #fff;
+        position : relative;
+        border: 1px solid #ffffffb7;
+        border-radius: 30px;
+        max-width: 100%;
+        /* padding: 10px 20px; */
+        font-size: 18px;
+        font-weight: 300;
+        /* margin : 20px 5px; */
+        width: 100%;
+        height: 40px;
+    }
+  
+    
+    .buttons-contain{
+    margin: auto;
+    display: flex;
+    
+    } 
+    .row100{
+      display: flex;
+      /* width: 100%; */
+      justify-content: space-between;
+    }
+    
+    .fieldset{
+        color :#07485B;
+        font-size: 15px;
+        padding: 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .input-style{
+      display: flex;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 8px;
+        color : rgb(255, 255, 255);
+        background: transparent;
+        /* width: 100%; */
+        padding: 10px 10px;
+        outline: #236A82;
+        font-size: 18px;
+        font-weight: 300;
+        margin : 15px 0;
+        resize: none;
+        padding: 5px;
+        background-color: #71A7A7;
+    }
+    
+    .input-style-submit{
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 8px;
+      color : rgb(255, 255, 255);
+      background: transparent;
+      min-width: 100%;
+      padding: 10px 0;
+      outline: #236A82;
+      font-size: 18px;
+      font-weight: 300;
+      margin : 15px 0;
+      resize: none;
+      padding: 5px;
+      background-color: #71A7A7;
+  }
+  select{
+    width: 100%;
+  }
+    @media(max-width:1300px){
+      
+        
+      .row100{
+          flex-direction: column;
+      }
+      .contactForm .row100 .inputBx50,
+      .contactForm .row100 .inputBx100{
+          width: 100%;
+          margin : 0;
+      }
+      /* .contactForm .rowinput[type="submit"]{
+        padding: 0px;
+        margin: 0px;
+    } */
+    .contactForm .row button{
+        margin : 20px 10px 20px 0;
+        display: inline-block;
+    }
+  
+    .formulaire {
+      width: 100%;
+      padding: 0px; 
+      margin-top: 0px;
+  
+  }
+  .input-style {
+    align-items: center;
+    padding: 0px;
+  }
+  input, select{
+    height: 40px;
+  }
+  input{
+    height: 35px;
+  }
+  img{
+  
+    padding: 5px;
+  }
+    } 
+
+    /* type voiture */
+
+    /* CARDS */
+.presentation{
+    min-height: 60vh;
+    min-width: 60%;
+}
+.title-content{
+    display: flex;
+    align-items: center;
+}
+.presentation-h2{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 34px;
+    padding: 20px 10px 20px 0px;
+    overflow:inline
+}
+.presentation-p{
+    text-align: justify;
+    padding-bottom: 20px ;
+}
+.presentation-line{
+    background-color: #07485b;
+    height: 5px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.title-content2{
+    min-width: fit-content;
+}
+
+.presentation h2 {
+    color: #232323;
+    display: inline-block;
+}
+.presentation-cars-container{
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.presentation-cars-card{
+    position: relative;
+    padding: 30px;
+    margin: 10px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.presentation-cars-card p {
+  position: relative;
+  color: black;
+  text-transform: inherit;
+}
+
+.presentation-cars-card p span {
+  position: relative;
+  color: #07485b;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+.notchosen {
+    filter: grayscale(10);
+    color: grey;
+}
+
+.presentation-cars-card-selection {
+position: absolute;
+height: 40px;
+width: 40px;
+border: 1px solid black;
+border-radius: 50px;
+top: -18px;
+right: -18px;
+background-color: #fff
+}
+.presentation-cars-card-selection input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 40px;
+    accent-color: #07485b
+    }
+.presentation-cars-card-imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    
+}
+.presentation-cars-card-imgBx img {
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+height: 60%;
+object-fit: contain;
+}
+.presentation-text-content{
+    text-align: center;
+}
+.presentation-h3{
+    text-transform: uppercase;
+}
+
+.button-card{
+    position : relative;
+    border-radius: 30px;
+    color : rgb(255, 255, 255);
+    background: #07485b;
+    max-width: 100%;
+    padding: 10px 32px;
+    outline : none;
+    font-size: 18px;
+    font-weight: 300;
+    margin : 20px 30px;
+    cursor: pointer;
+}
+
+/* Informations */
+
+
+form{
+    width: 100%;
+}
+.infosForm .row100{
+width: 100%;
+display: flex;
+}
+
+.infosForm .row{
+width: 100%;
+display: flex;
+}
+.infosForm .row100 .inputBx50{
+width: 50%;
+margin : 0 20px;
+}
+.infosForm .row100 .inputBx100{
+width: 100%;
+margin : 0 20px;
+}
+.infosForm .row100 input{
+position : relative;
+border: none;
+outline: none;
+}
+img{
+margin-right: 5px;
+height: 20px;
+}
+
+.infosForm .row100 textarea{
+height: 100px;
+}
+.infosForm .row100 input::placeholder,
+.infosForm .row100 textarea::placeholder{
+color: rgba(0, 0, 0, 0.5);
+font-size: 12px;
+}
+input[type="time"]::-webkit-calendar-picker-indicator,  input[type="date"]::-webkit-calendar-picker-indicator{
+visibility:hidden ;
+}
+.infosForm .row input[type="submit"], button{
+text-transform: uppercase;
+font-weight: 500;
+letter-spacing: 2px;
+cursor: pointer;
+border-radius: 30px;
+}
+
+.infosForm .row input[type="submit"]{
+background: #236A82;
+color: #fff;
+max-width: 200px;
+position : relative;
+border: 1px solid #236A82;
+border-radius: 30px;
+max-width: 100%;
+padding: 10px 20px;
+/* outline : none; */
+font-size: 18px;
+font-weight: 300;
+margin : 20px 30px;
+}
+
+.infosForm .row button{
+position : relative;
+border: 1px solid rgb(0, 0, 0);
+border-radius: 30px;
+color : rgb(255, 255, 255);
+background: rgb(0, 0, 0);
+max-width: 100%;
+padding: 10px 32px;
+outline : none;
+font-size: 18px;
+font-weight: 300;
+margin : 20px 30px;
+/* resize: none; */
+}
+
+
+.fieldset{
+color : #236A82;
+font-size: 18px;
+padding: 0;
+}
+
+.input-style{
+border: 1px solid rgb(0, 0, 0);
+border-radius: 8px;
+color : rgb(0, 0, 0);
+background: transparent;
+width: 100%;
+padding: 10px 0;
+outline: #236A82;
+font-size: 18px;
+font-weight: 300;
+margin : 15px -6px;
+resize: none;
+padding: 5px;
+}
+
+.row100-total{
+color : white;
+background: rgb(0, 0, 0);
+font-size: 25px;
+width: 97%;
+margin: auto;
+align-self: center;
+border-radius: 8px;
+}
+.total-contain{
+
+display: flex;
+justify-content: space-between;
+padding: 20px 30px;
+
+}
+
+
+@media(max-width:992px){
+
+.row100{
+    flex-direction: column;
+}
+.infosForm .row100 .inputBx50,
+.infosForm .row100 .inputBx100{
+    width: 100%;
+    margin : 0;
+}
+}
+
+@media screen and (max-width: 1024px) {
+   .presentation{
+    padding: 40px;
+   }
+
+}

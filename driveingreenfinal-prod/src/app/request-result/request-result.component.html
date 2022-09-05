@@ -1,0 +1,32 @@
+<h2>Votre recherche : </h2>
+<br>
+<div class="details_voiture">
+    <div class="presentation-cars-container">
+      <ng-container *ngFor="let voiture of voitures">
+        <div class="presentation-cars-card"
+        >
+          <div class="presentation-text-content">
+            <h4> {{ voiture.Marque }} </h4>
+            <h3 class="presentation-h3">
+               {{ voiture.Modele }}
+            </h3>
+          </div>
+          <div class="presentation-cars-card-imgBx">
+            <!-- <img [src]="voiture.img" alt="image de la voiture"> -->
+            <img
+              [src]="voiture.images"
+              alt="image de la voiture"
+              cd
+            />
+          </div>
+          <div class="presentation-text-content">
+            <p>À partir de <br><span>{{ voiture.prix }} €</span> /jour</p>
+          </div>
+          <!-- <button class="button-card" (click)="select_voiture($event)">
+            Ajouter
+          </button> -->
+        </div>
+      </ng-container>
+    </div>
+  </div>
+

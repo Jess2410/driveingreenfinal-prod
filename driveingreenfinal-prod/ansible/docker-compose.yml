@@ -1,0 +1,12 @@
+services:
+  ihm:
+    image: virtus/testgroupe4:v1
+    container_name: ihm
+    ports:
+      - "8090:80"
+    restart: always
+
+networks:
+  default:
+    external:
+      name: virtus

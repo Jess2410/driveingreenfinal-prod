@@ -1,0 +1,31 @@
+node {
+    stage('clone Drive inGreen') {
+        git branch: 'test',
+        credentialsId: 'virtusgit',
+        url: 'https://gitlab.com/Emespo/driveingreenfinal.git'
+    }
+
+    stage('Build') {
+        image = docker.build("virtus/testgroupe4:v1", '-f Dockerfile .')
+        sh 'docker images'
+    }
+
+   stage('push images'){
+       docker.withRegistry( '', 'docker' ) { 
+                image.push()
+				}
+
+    }
+
+    stage('deploiement_test') {
+           ansiblePlaybook(credentialsId: 'test', inventory: 'ansible/inventories/virtus.inv', playbook: 'cdihm.yml')
+    }
+
+
+    stage('clean images test') {
+        sh 'docker rmi virtus/testgroupe4:v1'
+        sh 'docker rmi $(docker images -f dangling=true -q)'
+        sh 'docker images'
+        }
+
+}

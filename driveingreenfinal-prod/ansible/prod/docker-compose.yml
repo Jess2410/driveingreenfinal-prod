@@ -1,0 +1,13 @@
+services:
+  ihm:
+    image: virtus/prodgroupe4:v1
+    container_name: ihm
+    ports:
+      - "80:80"
+    restart: always
+
+networks:
+  default:
+    external:
+      name: virtus
+

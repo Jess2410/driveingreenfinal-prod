@@ -1,0 +1,43 @@
+.map{
+    max-height: 80vh;
+    padding: 100px 150px;
+}
+.map-title-content{
+    display: flex;
+    align-items: center;
+}
+.map-h2{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 34px;
+    padding: 20px 10px 20px 0;
+}
+.map-line{
+    background-color: #07485b;
+    height: 5px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.map-imgBx{
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.map-title-content2{
+    min-width: fit-content;
+}
+
+.map-imgBx img{
+    max-width: 80%;
+    height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .map{
+     padding: 30px;
+    }
+    .map-h2{
+        text-align: center;
+    }
+}

@@ -1,0 +1,101 @@
+.advantages{
+    min-height: 40vh;
+    padding: 100px 150px;
+}
+.advantages-title-content{
+    display: flex;
+    align-items: center;
+}
+.advantages-h2{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 34px;
+    padding: 20px 0px 20px 10px;
+    overflow:inline
+}
+.advantages-p{
+    text-align: justify;
+    padding-bottom: 20px ;
+}
+.advantages-line{
+    background-color: #07485b;
+    height: 5px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.advantages-title-content2{
+    min-width: fit-content;
+}
+.advantages-h3{
+    text-transform: uppercase;
+    height: 80px;
+}
+
+.advantages-container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.advantages-card{
+    margin: 10px 10px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+    width: 200px;
+}
+.advantages-card-imgBx{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.advantages-card-imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.advantages-text-content{
+    text-align: center;
+}
+.advantages-text-content p{
+    text-align: justify;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    .advantages{
+     padding: 0 40px;
+    }
+    .advantages-h2{
+        text-align: center;
+    }
+    .advantages-content-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 30px 20px;
+        
+    }
+    .advantages-card{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        cursor: pointer;
+    
+    }
+    .advantages-text-content h3{
+        padding: 10px 0;
+    }
+}

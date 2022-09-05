@@ -1,0 +1,70 @@
+/* SECTION BANNER */
+
+.subsection{
+    width: 100%;
+    margin: auto;
+    background-image: url(../../assets/images/subsection-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    min-height: 80vh;
+}
+.subsection-container{
+    padding: 100px;
+}
+.subsection-banner{
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.subsection-banner span{
+    color: #18CF89;
+}
+.subsection-text p {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+.subsection-text-content{ 
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.subsection-imgBx{
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+}
+.subsection-hashtags{
+    font-size: 20px;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 1.25em;
+}
+
+@media screen and (max-width: 1024px) {
+    .subsection2-container{
+        padding: 10px 0px 300px 0px;
+    }
+    .subsection3-container{
+        padding: 260px 0px 200px 0px
+    }
+
+    .subsection2-text p {
+
+        padding: 0px;
+        text-align: justify;
+    }
+
+    .subsection2-banner,  .subsection3-banner, .subsection4-banner  {
+        max-width: 80%;
+    }
+
+    .subsection-container {
+        padding: 60px;
+    }
+}

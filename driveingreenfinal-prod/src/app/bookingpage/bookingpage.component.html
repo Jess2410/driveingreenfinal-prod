@@ -1,0 +1,185 @@
+<div class="container">
+  <div class="recap_formulaire" [class.big]="finalised">
+    <h2>Récapitulatif du voyage</h2>
+    <div class="recap_card">
+      <div class="recap_subtitle" [class.recap_subtitle_final]="finalised">
+        <p class="recap_number" (click)="tabNumberchange('1')">1</p>
+        <p>Voyage</p>
+      </div>
+      <div *ngIf="date_depart != null || agence != null" class="recap_departarrivee">
+        <h3 *ngIf="date_depart != null || heure_depart != null">Départ</h3>
+
+        <div *ngIf="date_depart != '' || heure_depart != ''" class="input_style">
+          <div *ngIf="agence != ''" class="details">
+            <img src="./../../assets/images/localisation.png" alt="date" />
+            <p>{{ agence }}</p>
+          </div>
+          <div class="dateheure">
+            <div *ngIf="date_depart != ''" class="details">
+              <img src="./../../assets/images/calendar.png" alt="date" />
+              <p>{{ date_depart }}</p>
+            </div>
+            <div  class="details">
+              <img src="./../../assets/images/clock.png" alt="heure" />
+              <p>{{ heure_depart }}</p>
+            </div>
+          </div>
+        </div>
+        <h3 *ngIf="date_arrivee != null || heure_arrivee != null">Arrivée</h3>
+        <div
+          *ngIf="date_arrivee != null || heure_arrivee != null"
+          class="input_style"
+        >
+          <div class="dateheure">
+            <div *ngIf="date_arrivee != null" class="details">
+              <img src="./../../assets/images/calendar.png" alt="date" />
+              <p>{{ date_arrivee }}</p>
+            </div>
+            <div *ngIf="heure_arrivee != null" class="details">
+              <img src="./../../assets/images/clock.png" alt="heure" />
+              <p>{{ heure_arrivee }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recap_card">
+      <div class="recap_subtitle" [class.recap_subtitle_final]="finalised">
+        <p class="recap_number" (click)="tabNumberchange('1')">2</p>
+        <p>Véhicule</p>
+      </div>
+      <div *ngIf="infos_voiture != null" class="recap_voiture">
+        <p>{{ infos_voiture }}</p>
+        <p>{{ prix_voiture }}</p>
+      </div>
+    </div>
+    <div class="recap_card">
+      <div class="recap_subtitle" [class.recap_subtitle_final]="finalised">
+        <p class="recap_number" (click)="tabNumberchange('1')">3</p>
+        <p>Informations</p>
+      </div>
+      <div *ngIf="nom != null" class="recap_voiture">
+        <p>{{ nom }}</p>
+        <p>{{ prenom }}</p>
+        <p>{{ tel }}</p>
+      </div>
+
+    </div>
+    <div class="recap_card" *ngIf="finalised == true">
+    </div>
+    <div class="btn-final">
+      <a *ngIf="finalised" routerLink="/">Retourner à l'accueil</a>
+    </div>
+  </div>
+
+  <div id="remonte" class="tab" [class.hidden]="finalised" *ngIf="!finalised">
+    <ul>
+      <li class="1" [class.active]="id === '1'" (click)="tabNumberchange('1')">1</li>
+      <li class="2" [class.active]="id === '2'" (click)="tabNumberchange('2')">2</li>
+      <li class="3" [class.active]="id === '3'" (click)="tabNumberchange('3')">3</li>
+    </ul>
+    <div class="content">
+      <div class="content-value" *ngIf="id === '1'">
+        <h2>1- Je planifie mon voyage</h2>
+        <div>
+          <app-form-booking-light></app-form-booking-light>
+        </div>
+      </div>
+      <div class="content-value" *ngIf="id === '2'">
+        <h2>2- Je choisis mon véhicule</h2>
+        <div>
+          <div id="details_voiture">
+            <div class="presentation-cars-container">
+              <ng-container *ngFor="let voiture of voitures">
+                <div
+                  *ngIf="voiture.type == type"
+                  class="presentation-cars-card"
+                >
+                  <div class="presentation-text-content">
+                    <h4>{{ voiture.Marque }}</h4>
+                    <h3 class="presentation-h3">
+                      {{ voiture.Modele }}
+                    </h3>
+                    <hr>
+                  </div>
+                  <div class="presentation-cars-card-imgBx">
+                    <img
+                    [src]="voiture.images"
+                      alt="image de la voiture"
+                      cd
+                    />
+                  </div>
+                  <div class="presentation-text-content">
+                    <p>À partir de</p>
+                    <span>{{ voiture.prix }} €</span>
+                    <p>/jour</p>
+                  </div>
+                    <button class="button-card" (click)="select_voiture($event)" value="{{ voiture.idvoiture }}">
+                    Ajouter
+                    </button>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-value" *ngIf="id === '3'">
+        <h2>3- Je saisis mes informations</h2>
+        <div>
+          <form class="infosForm">
+            <div class="row100">
+              <div class="inputBx50">
+                <div class="input-style">
+                  <input type="text" name="nom" placeholder="Nom" (change)="change_nom($event)" />
+                </div>
+              </div>
+              <div class="inputBx50">
+                <div class="input-style">
+                  <input type="text" name="prénom" placeholder="Prénom" (change)="change_prenom($event)" />
+                </div>
+              </div>
+            </div>
+            <div class="row100">
+              <div class="inputBx50">
+                <div class="input-style">
+                  <input type="tel" name="telephone" placeholder="Téléphone" (change)="change_tel($event)" />
+                </div>
+              </div>
+              <div class="inputBx50">
+                <div class="input-style">
+                  <input type="email" name="email" placeholder="Email" />
+                </div>
+              </div>
+            </div>
+            <div class="row100">
+              <div class="inputBx100">
+                <textarea
+                  placeholder="Informations Complémentaires"
+                  class="input-style"
+                  type="text"
+                  name="informations"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row100-total">
+              <div class="total-contain">
+                <p class="total">Coût Total</p>
+                <p class="price"> {{ prix_voiture }}</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="buttons-contain">
+        <p id="annuler" [class.hidden]="finalised" (click)="previousTab(id)">
+          Annuler
+        </p>
+        <p id="continuer"  [class.hidden]="finalised" (click)="nextTab(id)">
+          {{ id != "3" ? "Continuer" : "Finaliser" }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

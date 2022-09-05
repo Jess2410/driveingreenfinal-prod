@@ -1,0 +1,19 @@
+<section class="presentation">
+    <div class="presentation-cars-container">
+        <div *ngFor="let voiture of voitures" class="presentation-cars-card">
+            <div class="presentation-cars-card-selection">
+                <input type="radio" name="type-cars">
+            </div>
+            <div class="presentation-text-content">
+                <h3 class="presentation-h3"> {{ voiture.marque }} {{ voiture.modele }} </h3>
+            </div>
+            <div class="presentation-cars-card-imgBx">
+                <img [src]="voiture.img" alt="image de la voiture">
+            </div>
+            <div class="presentation-text-content">
+                <p>Description de la voiture</p>
+            </div>
+            <button class="button-card">Ajouter</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="text-connexion">
+      <h2>Connexion</h2>
+    </div>
+    <div class="connexion">
+      <div class="connexion-email input-connexion">
+        <input 
+        type="email" 
+        placeholder="Saisir l'adresse e-mail"
+        name="email"
+        (change)= "email = $any($event.target).value" 
+        [value]="email"
+        required
+        />
+      </div>
+      <!-- <p *ngIf="email === ''">Erreur: le champ email est obligatoire</p> -->
+      <div class="connexion-password input-connexion">
+        <input 
+        name="password" 
+        type="password" 
+        placeholder="Mot de Passe"
+        [value]="mdp"
+        required
+        />
+      </div>
+      
+      <div class="btn-connexion">
+        <button (click)="connection(email)" type="submit" class="btn-conn">Se connecter</button>
+      </div>
+      <div class="about-connexion">
+        <div class="forgive about-conn">
+            <p class="lien" >Mot de passe oublié </p>
+        </div>
+        <div class="new-acc about-conn">
+            <p class="lien" routerLink="/inscription" >Créer un compte</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 
+        (input)="connection($event)" -->

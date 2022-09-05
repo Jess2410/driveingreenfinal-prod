@@ -1,0 +1,105 @@
+.services{
+    min-height: 35vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/images/services.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: center;
+    padding: 40px 150px;
+    color: white;
+}
+.title-content{
+    display: flex;
+    align-items: center;
+}
+.title-content2{
+    min-width: fit-content;
+}
+.services-h2{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 34px;
+    padding: 30px 0px 20px 10px;
+    overflow:inline
+}
+
+.services-line{
+    background-color: #ffffff;
+    height: 5px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.services-content-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 100px;
+    
+}
+
+.services-card{
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+    width: 220px;
+}
+.services-card-imgBx{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+}
+.services-card-imgBx img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+.services-text-content h3{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px 0;
+    height: 50px;
+}
+.services-text-content p{
+    text-align: justify;
+}
+
+@media screen and (max-width: 1024px) {
+    .services{
+     padding: 40px;
+    }
+    .services-h2{
+        text-align: center;
+    }
+    .services-content-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 30px 20px;
+        
+    }
+    .services-card{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        cursor: pointer;
+    
+    }
+    .services-text-content h3{
+        padding: 10px 0;
+    }
+}

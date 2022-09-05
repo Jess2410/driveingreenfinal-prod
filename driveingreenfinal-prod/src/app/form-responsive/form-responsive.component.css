@@ -1,0 +1,132 @@
+.container{
+    padding: 30px;
+    }
+    .contactForm {
+        position : relative;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .contactForm form{
+        width: 100%;
+    }
+    .contactForm .row100{
+        width: 100%;
+        display: flex;
+    }
+    
+    .contactForm .row{
+        width: 100%;
+        display: flex;
+    }
+    .contactForm .row100 .inputBx50{
+        width: 50%;
+        margin : 0 20px;
+    }
+    .contactForm .row100 .inputBx100{
+        width: 100%;
+        margin : 0 20px;
+    }
+    .contactForm .row100 input{
+        position : relative;
+        border: none;
+        outline: none;
+    }
+    img{
+        margin-right: 5px;
+        height: 20px;
+    }
+    .contactForm .row100 input::placeholder{
+        color: rgba(0, 0, 0, 0.5);
+        /* margin-left: 5px; */
+    }
+    input[type="time"]::-webkit-calendar-picker-indicator,  input[type="date"]::-webkit-calendar-picker-indicator{
+        visibility:hidden ;
+     }
+    .contactForm .row input[type="submit"], button{
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    
+    .contactForm .row input[type="submit"]{
+        background: #236A82;
+        color: #fff;
+        max-width: 200px;
+        position : relative;
+        border: 1px solid #236A82;
+        border-radius: 30px;
+        max-width: 100%;
+        padding: 10px 20px;
+        /* outline : none; */
+        font-size: 18px;
+        font-weight: 300;
+        margin : 20px 30px;
+    }
+    
+    .contactForm .row button{
+        position : relative;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 30px;
+        color : rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+        max-width: 100%;
+        padding: 10px 32px;
+        outline : none;
+        font-size: 18px;
+        font-weight: 300;
+        margin : 20px 30px;
+        /* resize: none; */
+    }
+    
+    .buttons-contain{
+    margin: auto;
+    display: flex;
+    
+    } 
+    
+    .fieldset{
+        color : #236A82;
+        font-size: 18px;
+        padding: 0;
+    }
+    
+    .input-style{
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 8px;
+        color : rgb(0, 0, 0);
+        background: transparent;
+        width: 100%;
+        padding: 10px 0;
+        outline: #236A82;
+        font-size: 18px;
+        font-weight: 300;
+        margin : 15px 0;
+        resize: none;
+        padding: 5px;
+    }
+    
+    @media(max-width:992px){
+        
+      .row100{
+          flex-direction: column;
+      }
+      .contactForm .row100 .inputBx50,
+      .contactForm .row100 .inputBx100{
+          width: 100%;
+          margin : 0;
+      }
+    
+      .contactForm .row input[type="submit"]{
+    
+        margin : 20px 0px 20px 10px;
+    }
+    
+    .contactForm .row button{
+        margin : 20px 10px 20px 0;
+        display: inline-block;
+    }
+    
+    }

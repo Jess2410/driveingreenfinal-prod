@@ -1,0 +1,11 @@
+[docker]
+51.91.211.14 ansible_user=ubuntu
+
+[docker:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[dockerprod]
+51.68.90.191 ansible_user=ubuntu
+
+[dockerprod:vars]
+ansible_python_interpreter=/usr/bin/python3

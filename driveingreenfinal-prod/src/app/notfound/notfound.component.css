@@ -1,0 +1,138 @@
+/* HEADER */
+.header {
+    min-height: 100vh;
+    background:  url('../../assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 20px;
+}
+
+.header-content{
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+ 
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-ul {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+}
+
+.header-li {
+    color: #07485B;
+    /* font-family: 'Lato', sans-serif; */
+    padding: 30px;
+}
+
+.header-button {
+    background-color: #07485B;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 50px;
+    border-radius: 25px;
+}
+.header-banner{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.header-form-contain{
+    min-width: 40%;
+    max-height: 75%;
+    /* background-color: #07485B; */
+    /* padding: 50px; */
+    justify-content: center;
+}
+
+.header-slogan-contain{
+    min-width: 48%;
+    padding: 50px;
+}
+.header-slogan-txt{
+    text-align: right;
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+.header-slogan-txt span{
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 1124px) {
+
+    
+    .header-button {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: 25px;
+    }
+    
+    .header-banner{
+        flex-direction: column-reverse;
+        padding: 20px 10px;
+        margin: auto;
+    }
+    .header-form-contain, .header-slogan-contain{
+        margin: auto;
+    }
+    .header-slogan-txt{
+        line-height: 1.5em;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .header-logo img{
+        height: 40%;
+    }
+    .header-li {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    .header-button {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: 25px;
+    }
+
+    .header-slogan-txt{
+        line-height: 1.5em;
+        font-size: 15px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        align-items: top;
+    }
+
+    .header-ul {
+        flex-direction: column;
+    }
+
+    .header-button {
+        order: -1;
+        margin-left: 0;
+    }
+
+}

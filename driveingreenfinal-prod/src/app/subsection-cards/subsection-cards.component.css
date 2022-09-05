@@ -1,0 +1,107 @@
+
+.subsection2{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background-image: url(../../assets/images/subsection-bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    height: auto;
+}
+.subsection2-container{
+    padding: 60px 100px 30px 100px;
+}
+.subsection2-banner{
+    max-width: 40%;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.subsection2-banner span{
+    color: #18CF89;
+}
+.subsection2-text p {
+    font-size: 20px;
+    /* padding: 20px; */
+    letter-spacing: 1px;
+    line-height: 1.25em;
+}
+.subsection2-text-content{ 
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.subsection2-text-content h2{
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+.subsection2-imgBx{
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+}
+.subsection2-hashtags{
+    font-size: 16px;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 1.25em;
+}
+
+
+.test{
+   position: relative;
+    min-height: 300px;
+   width: 100%;
+    padding-top: 100px;
+}
+.test img{
+   position: absolute;
+   height: 80%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .subsection2-container{
+        padding: 10px 0px 150px 0px;
+    }
+    .subsection2-banner{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .subsection2-container{
+        padding: 10px 0px 30px 0px;
+    }
+    .subsection3-container{
+        padding: 260px 0px 200px 0px
+    }
+
+    .subsection2-text p {
+   
+        padding: 0px;
+        text-align: justify;
+    }
+
+    .subsection2-banner,  .subsection3-banner, .subsection4-banner  {
+        max-width: 80%;
+    }
+
+    .subsection-container {
+        padding: 60px;
+    }
+    .test img{
+        height: 50%;
+     }
+}

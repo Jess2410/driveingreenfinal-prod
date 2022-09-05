@@ -1,0 +1,28 @@
+- name: "server test cd "
+  hosts: "dockerprod"
+  tasks:
+   - name: "Log into DockerHub"
+     docker_login:
+      username: virtus
+      password: bes@83HUB
+
+   - name: "Pull Docker image virtus"
+     docker_image:
+      name: "virtus/prodgroupe4:v1"
+      source: pull
+
+   - name: "copy docker compose"
+     copy:
+      src: "ansible/prod/docker-compose.yml"
+      dest: "/home/ubuntu/site/"
+      owner: "ubuntu"
+      group: "docker"
+
+   - name: Tear down existing services
+     docker_compose:
+      project_src: /home/ubuntu/site
+      build: no
+      recreate: always
+      restarted: yes
+      remove_images: all
+      pull: yes
